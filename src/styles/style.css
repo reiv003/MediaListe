@@ -1,3 +1,37 @@
-body {
-	background-color: aliceblue;
+.container {
+	background-color: var(--site-background-color);
+	width: 100vw;
+	height: 100vh;
+	font-family: "K2DLight";
+	color: var(--dark-text-color);
+}
+
+h1 {
+	font-family: "CaveatBold";
+	color: var(--dark-text-color);
+}
+
+h2 {
+	font-family: "Caveat";
+	color: var(--subtitle-text-color)
+}
+
+header {
+	background-color: var(--banner-color);
+}
+
+nav {
+	font-family: "K2DSemiBold";
+	color: var(--detail-color);
+}
+
+a {
+	font-family: "K2DSemiBold";
+	color: var(--highlight-color-1);
+	text-decoration: underline;
+}
+
+.detailText {
+	font-family: "K2DThin";
+	color: var(--detail-color);
 }
