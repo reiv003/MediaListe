@@ -1,28 +1,54 @@
+/* classes should be grouped below semantic elements, but this is the top-level container element that defines styles for the whole document, so I've placed it at the top here (instead of applying these rules directly to the body element) */
+
 .container {
 	background-color: var(--site-background-color);
 	width: 100vw;
 	height: 100vh;
 	font-family: "K2DLight";
+	font-size: 20px;
 	color: var(--dark-text-color);
+
+	/* Defines a standard 12-column grid, and additionally a rule for the grid rows that ensures the main content (routerview) takes up as much space as available by making the header and footer take as little space as possible. */
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: min-content 1fr min-content;
 }
 
 h1 {
 	font-family: "CaveatBold";
 	color: var(--dark-text-color);
+	font-size: 3em;
 }
 
 h2 {
 	font-family: "Caveat";
-	color: var(--subtitle-text-color)
+	color: var(--subtitle-text-color);
+	font-size: 2em;
+	border-bottom: 1px dashed var(--accent-color);
 }
 
 header {
 	background-color: var(--banner-color);
+	grid-column: 2 / span 12;
+	text-align: center;
+	padding: 0.7em;
 }
 
-nav {
-	font-family: "K2DSemiBold";
-	color: var(--detail-color);
+footer,
+footer a {
+	color: var(--light-text-color);
+	background-color: var(--accent-color);
+	text-decoration: none;
+	grid-column: 2 / span 12;
+	text-align: center;
+	padding-bottom: 0.3em;
+}
+
+footer li {
+	display: inline-block;
+	padding-bottom: 2em;
+	padding-left: 0.3em;
+	padding-top: 1.2em;
 }
 
 a {
@@ -31,7 +57,111 @@ a {
 	text-decoration: underline;
 }
 
-.detailText {
+button {
+	border-radius: 0.4em;
+	color: var(--light-text-color);
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	padding-left: 0.7em;
+	padding-right: 7em;
+	margin: 1em;
+}
+
+select {
+	margin: var(--standard-small-air);
+	box-shadow: 0.2em 0.2em 2px rgb(67, 42, 31, 0.25);
+	padding: 0.2em;
+	color: var(--accent-color);
 	font-family: "K2DThin";
-	color: var(--detail-color);
+	font-size: 0.8em;
+}
+
+button:first-child {
+	background-color: var(--highlight-color-1);
+}
+
+button:nth-child(2) {
+	background-color: var(--highlight-color-2);
+}
+
+button:nth-child(3) {
+	background-color: var(--accent-color);
+}
+
+.sidebar {
+	font-family: "K2DSemiBold";
+	font-size: 1.4em;
+	color: var(--accent-color);
+	text-align: right;
+	border-right: 2px solid var(--banner-color);
+	grid-column: 1 / 2;
+	grid-row: 1 / span 12;
+}
+
+.sidebar nav li {
+	border-bottom: 2px solid var(--banner-color);
+	padding-top: 2em;
+	padding-right: 1.2em;
+	padding-bottom: 0.2em;
+	padding-left: 0.8em;
+}
+
+.router-content {
+	grid-column: 3 / span 9;
+	/* display: inline-block; */
+}
+
+/* drop-shadow function is used to make the logo pop out more from the background. It should probably be part of the image itself, but this is how I did it in figma (applied drop shadow effect to the image). Need to check if the logo can be exported as svg with the drop shadow included. */
+
+.logo {
+	filter: drop-shadow(0px 4px 0px rgb(197, 194, 192));
+	margin-right: var(--standard-small-air);
+	margin-top: var(--standard-small-air);
+}
+
+.detail-text {
+	font-family: "K2DThin";
+	color: var(--accent-color);
+}
+
+/* placing is roughly correct, but needs some fixing. also the text inside the box is being displayed inline unintentionally (because of display flex on child elements, but without it flex rules like justify-content doesn't work for some reason). may need to use grid instead to accurately place the items */
+
+.home-container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	gap: var(--standard-small-air);
+
+}
+
+.raised-box {
+	background-color: rgb(249, 248, 246, 0.5);
+	border-radius: 1em;
+	box-shadow: 0.2em 0.2em 2px rgb(67, 42, 31, 0.25);
+	padding: var(--standard-small-air);
+}
+
+.home-container .raised-box {
+	display: flex;
+	width: 150%;
+	height: 100%;
+
+
+}
+
+.home-buttons {
+	margin-top: 5em;
+	display: flex;
+
+}
+
+.flat-box {
+	display: flex;
+	background-color: rgb(255, 255, 255, 0.5);
+	padding: 2em;
+}
+
+.flat-box li {
+	list-style: disc;
+	color: var(--highlight-color-1);
 }
