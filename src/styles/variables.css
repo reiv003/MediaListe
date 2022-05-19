@@ -1,3 +1,19 @@
 :root {
-	--sample-variable: 0.5em;
+	--site-background-color: #E7E4E2;
+	--banner-color: #C1B7A9;
+
+	--dark-text-color: #2C2521;
+	--light-text-color: #FFFFFF;
+	--subtitle-text-color: #453A34;
+
+	/* used for menu text, rating stars, footer bg and select text */
+	--accent-color: #2F586E;
+	--light-accent-color: #5E8AA3;
+
+	/* used for buttons, tabs and links (1) */
+	--highlight-color-1: #1F8989;
+	--highlight-color-2: #5C8C1E;
+
+	/* common variable for small bits of both padding and margin */
+	--standard-small-air: 0.5em;
 }
