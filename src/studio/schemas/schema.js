@@ -8,9 +8,16 @@ import series from './documents/series.js'
 import user from './documents/user.js'
 import webcomic from './documents/webcomic.js'
 
+import booksLog from './documents/booksLog.js'
+import gamesLog from './documents/gamesLog.js'
+import moviesLog from './documents/moviesLog.js'
+import seriesLog from './documents/seriesLog.js'
+import webcomicsLog from './documents/webcomicsLog.js'
+
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
-    user, book, game, movie, series, webcomic
+    user, book, game, movie, series, webcomic, booksLog, gamesLog,
+    moviesLog, seriesLog, webcomicsLog
   ]),
 })
