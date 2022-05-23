@@ -4,7 +4,7 @@ export default {
 	data() {
 		return {
 			loading: true,
-			result: null
+			result: null,
 		}
 	},
 

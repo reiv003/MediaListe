@@ -1,12 +1,24 @@
 <template>
-	<h2>Logg</h2>
+	<div v-if="loading"><img src="/assets/images/logo.png" class="loading-image"/></div>
+	<div v-else>
+		<h2>Logg</h2>
+		 <!-- {{ JSON.stringify(result, null) }}  -->
+		 <!-- <div> {{ result.gamesLog.status }} </div> -->
+		<!-- <div><img src="/assets/images/logo.png" class="loading-image"/></div>	  -->
+		<div> {{ result.gamesPlayed[0].title }} </div>
+		<div> {{ result.gamesPlayed[0].status }} </div>
+		<div> {{ result.gamesPlayed[0].progress }} </div>
+		<!-- <div> {{ result.gamesPlayed[0].dateAdded }} </div> -->
+		<div> {{ result.gamesPlayed[0]._createdAt }} </div>
+	</div>
+	<!-- <h2>Logg</h2> -->
 	<!-- <div>{{ result.user }}</div> -->
-	<!-- <div> {{ result.booksLogged }} </div> -->
-	<div> {{ result.slug }} </div>
+	<!-- <div> {{ result.gamesPlayed }} </div> -->
+	<!-- <div> {{ result }} </div> -->
 </template>
 
 <script>
-	import query from '../groq/log.groq?raw';
+	import query from '../groq/gamesLog.groq?raw';
 	import viewMixin from '../mixins/viewMixin.js';
 
 	export default {
