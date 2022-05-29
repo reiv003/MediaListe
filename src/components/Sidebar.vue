@@ -1,7 +1,7 @@
 <template>
 	<div class="sidebar">
 		<nav>
-			<div><img src="/assets/images/Logo.png" class="logo"/></div>
+			<div><RouterLink :to="{ name: 'home' }"><img src="/assets/images/Logo.png" class="logo"/></RouterLink></div>
 			<ul>
 				<li>Bøker</li>
 				<li>Spill</li>

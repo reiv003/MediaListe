@@ -1,0 +1,6 @@
+*[slug.current == $slug][0] {
+	gamesPlayed[]-> {
+		_id,title,status,dateAdded,progress,_createdAt
+	}
+}
+
