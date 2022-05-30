@@ -1,5 +1,5 @@
 <template>
-	<div v-if="loading"><img src="/assets/images/logo.png" class="loading-image"/></div>
+	<div v-if="loading"><img src="/assets/images/Logo.png" class="loading-image"/></div>
 	<div v-else>
 		<h2>Logg</h2>
 		 <!-- {{ JSON.stringify(result, null) }}  -->
