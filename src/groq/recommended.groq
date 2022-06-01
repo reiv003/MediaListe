@@ -1,0 +1,3 @@
+*[_type == $documentType && status != "completed"] | order(_createdAt asc) {
+  title
+}
