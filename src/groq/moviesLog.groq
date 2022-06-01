@@ -1,0 +1,6 @@
+*[slug.current == $slug][0] {
+	moviesLogged[]-> {
+		_id,title,status,dateAdded,_createdAt
+	}
+}
+
