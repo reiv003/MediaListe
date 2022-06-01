@@ -24,21 +24,13 @@
 			<div>
 				<h2>Siste oppføringer</h2>
 				<div class="flat-box">
-					<ul>
-						<li><a href="#">Eksempeltekst</a></li>
-						<li><a href="#">Eksempeltekst</a></li>
-						<li><a href="#">Eksempeltekst</a></li>
-					</ul>
+					<Latest/>
 				</div>
 			</div>
 				<div>
 				<h2>Anbefalinger</h2>
 				<div class="flat-box">
-					<ul>
-						<li><a href="#">Eksempeltekst</a></li>
-						<li><a href="#">Eksempeltekst</a></li>
-						<li><a href="#">Eksempeltekst</a></li>
-					</ul>
+					<Recommended/>
 				</div>
 			</div>
 		</div>
@@ -53,12 +45,15 @@
 </template>
 
 <script>
-	import Sample from "../components/Sample.vue";
+ import Latest from '../components/Latest.vue';
+ import Recommended from '../components/Recommended.vue';
+	
 
 	export default {
 		components: {
-			Sample,
+			Latest, Recommended
 		}
+		
 	};
 </script>
 
