@@ -184,7 +184,7 @@ button:nth-child(3) {
 	}
 }
 
-/* The content loads too fast right now for the animation to show, so I added it to the logo as well. */
+/* The content loads too fast right now for the animation to really show, so I added it to the logo as well. */
 .loading-image,
 .logo:hover {
 	animation-name: loading;
