@@ -36,7 +36,7 @@
 		</div>
 
 		<div class="home-buttons">
-			<button>Statistikk</button>
+			<RouterLink :to="{ name: 'statistics' }"><button>Statistikk</button></RouterLink>
 			<button>Kalender</button>
 			<button>Eksport</button>
 		</div>
