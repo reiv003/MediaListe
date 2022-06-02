@@ -2,6 +2,7 @@
 	<div class="home-container">
 		<div>
 			<h2>Legg til oppføring</h2>
+			<!-- Non-functional, would be used for the user to be able to add entries from the GUI (instead of having to do it directly in Sanity as it is right now) -->
 			<div class="raised-box">
 				<div>
 					<label for="category-select">Kategori:</label>
